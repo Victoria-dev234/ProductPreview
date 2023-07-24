@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+/* || RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || VARIABLES */
+
+:root {
+    --FF-1:'Fraunces',serif;
+    --FF-2:'Montserrat', sans-serif;
+    
+    /* || COLORS */
+    --BG-COLOR: hsl(30, 38%, 92%);
+    --PARAGRAPH-COLOR: hsl(228, 12%, 48%);
+    --H1-COLOR:hsl(212, 21%, 14%);
+    --BUTTON-COLOR: hsl(158, 36%, 37%);
+}
+
+body {
+    margin: 20px;
+    font-size: 14px;
+    font-family: var(--FF-2);
+    background-color: var(--BG-COLOR); 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 85%;
+    max-width: 300px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.main__hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.main__text {
+    margin: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+#spacing {
+    letter-spacing: 0.5em;
+}
+
+.main__text p {
+    font-family: var(--FF-2);
+    color: var(--PARAGRAPH-COLOR);
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.main__text h1 {
+    font-family: var(--FF-1);
+    color: var(--H1-COLOR);
+    font-size: 1.7em;
+    font-weight: 700;
+}
+
+.main__price {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.main__price p {
+    color: var(--BUTTON-COLOR);
+    font-weight: 700;
+    font-size: 1.8rem;
+    
+}
+
+.main__price del {
+    text-decoration: line-through;
+    color: var(--PARAGRAPH-COLOR);
+}
+
+.main__button {
+    padding: 0.80rem;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--BUTTON-COLOR);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__button:hover {
+    background-color: hsl(157, 38%, 23%);
+}
+
+
+.main__button span{
+    margin-left: 8px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1em;  
+}
+
+footer {
+    margin: 20px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .main {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 70%;
+        max-width: 700px;
+        height: auto;
+    }
+    
+    .main__text {
+        gap: 0.6rem;
+    }
+}
